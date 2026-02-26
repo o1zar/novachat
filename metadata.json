@@ -1,0 +1,5 @@
+{
+  "name": "NOVA Messenger",
+  "description": "A real-time messenger with global and direct chats, built with WebSockets and Express.",
+  "requestFramePermissions": ["camera", "microphone"]
+}

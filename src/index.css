@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Syne", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --bg: #09090e;
+  --bg2: #10101a;
+  --bg3: #171723;
+  --bg4: #1c1c2e;
+  --bg5: #21213a;
+  --accent: #7b5ea7;
+  --accent2: #c06ef3;
+  --glow1: #9b6bff;
+  --glow2: #f06bff;
+  --text: #eeeef8;
+  --text2: #9090b8;
+  --border: rgba(255, 255, 255, 0.05);
+}
+
+.light {
+  --bg: #f8f9fa;
+  --bg2: #ffffff;
+  --bg3: #f1f3f5;
+  --bg4: #e9ecef;
+  --bg5: #dee2e6;
+  --accent: #6a4fcc;
+  --accent2: #9b6bff;
+  --glow1: #6a4fcc;
+  --glow2: #9b6bff;
+  --text: #212529;
+  --text2: #495057;
+  --border: rgba(0, 0, 0, 0.08);
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--bg)] text-[var(--text)] font-sans antialiased;
+    background-image: 
+      radial-gradient(ellipse 70% 60% at 10% 40%, rgba(123, 94, 167, 0.09) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 70% at 90% 20%, rgba(192, 110, 243, 0.07) 0%, transparent 60%);
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.nova-glow {
+  box-shadow: 0 0 28px rgba(155, 107, 255, 0.45);
+}
+
+.nova-gradient-text {
+  background: linear-gradient(90deg, var(--glow1), var(--glow2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
